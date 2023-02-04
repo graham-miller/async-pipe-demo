@@ -1,0 +1,18 @@
+<ng-container *ngIf="data$ | async as data">
+  <dl>
+    <dt>Response 1</dt>
+    <dd>{{ data.response1.description }}</dd>
+    <dt>Response 2</dt>
+    <dd>{{ data.response2.description }}</dd>
+  </dl>
+</ng-container>
+
+<ng-container *ngIf="!(data$ | async)">
+  <p>Loading...</p>
+</ng-container>
+
+<!-- <dl>
+  <dt>Counter</dt>
+  <dd>{{ count$ | async }}</dd>
+</dl>
+<button type="button" [disabled]="disabled$ | async">Create account</button> -->
